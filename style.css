@@ -1,0 +1,260 @@
+nav  {
+    background-color: black;
+    color: #ffffff;
+}
+
+h1, h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    color: #ffffff;
+    background-color: black;
+    margin: 2rem;
+}
+
+footer {
+    background-color: black;
+    color: #ffffff;
+}
+
+footer img {
+    width: 5%;
+}
+
+
+a {
+    color: #ffffff;
+}
+
+a:hover {
+
+    color: palevioletred;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.flex div {
+    padding:5px;
+}
+
+.flex2 {
+    display: flex;
+}
+
+.flex2 img {
+    max-width: 80%;
+}
+
+.flex2 p {
+    max-width: 80%;
+}
+
+.latestflex {
+    display: flex;
+}
+
+.latestflex img {
+    width: 85%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ffffff;
+    
+}
+
+.latestflex p {
+    width: 85%;
+}
+
+.latestflex div {
+    width: 95%;
+}
+
+nav,footer {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    body, nav, footer {
+        background-color: #ffffff;
+        color: black;
+    }
+    
+    .flex {
+      width:100%;
+      display:block;
+
+    }
+    .flex2 {
+      width: 100%;
+      float: right;
+      clear: both;
+      flex-wrap: wrap;
+    }
+    .latestflex {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+    .logo {
+        width:100%;
+        display: block;
+    }
+
+    .logo img {
+        width: 40%;
+    }
+    .socials {
+        width:100%;
+    }
+    
+    a {
+        color: black;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 10px;
+    }
+
+    a:hover {
+
+        color:#1F404C;
+    }
+  }
+  
+
+  .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+  }
+
+  .logo img {
+    padding: 5px;
+  }
+
+  .socials {
+      display: flex;
+      justify-content:flex-end;
+  }
+
+  .socials a {
+      padding: 5px;
+  }
+
+  button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 12px;
+    line-height: 20px;
+    height: 30px;
+    max-height: 30px;
+    background: black;
+    font-weight: 700;
+    border: 0;
+    border-radius: 0;
+    color: #FFFFFF;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow;
+    transition-duration: 150ms;
+  }
+
+  button:hover {
+    background: pink;
+  }
+  :root {
+    --drop-height: 200px;										
+    --logo-size: 48px;
+    --offset: 50px;
+    --shadow-height: 8px;
+  }
+
+  .container {
+    position: relative;
+  }
+  
+  .logo {
+    position: absolute;
+    top: var(--offset);
+    left: calc(50% - var(--logo-size) / 2);								
+  }
+  
+  .shadow {
+    position: absolute;
+    top: calc(
+      var(--offset) + 
+      var(--drop-height) + 
+      var(--logo-size) - 
+      1.5  var(--shadow-height)
+    );
+    left: calc(50% - var(--logo-size) / 2);
+  }
+
+  @keyframes bounce {
+    from { 
+      transform: translateY(0) scale(1);
+    }
+    to   { 
+      transform: translateY(var(--drop-height)) scale(1, 0.7);
+    }
+  }
+  
+  .logo {
+    animation-name: bounce; 
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes grow {
+    from {
+      transform: scale(0.2, 0.5);								
+    }
+  
+    to {
+      transform: scale(1, 0.1);   
+    }
+  }
+
+  .logo {	
+    background-image: './path/to/logo.png';							
+    background-size: cover;
+    border-radius:50% 50% 50% 50%;
+  }
+
+  .shadow {	
+  background: radial-gradient(50% 50%, rgba(150,150,150,1), rgba(150,150,150,0.05));
+}
+ 
+.logo, .container, .shadow {
+    width: 100%;
+}
+
+.resume {
+ display:flex;
+ justify-content: space-around;
+}
+
+
+.skip {
+  position: absolute;
+  left: -10000px; 
+  top: auto; 
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
